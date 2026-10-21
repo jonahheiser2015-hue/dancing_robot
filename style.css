@@ -1,0 +1,354 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    color: #f4f7ff;
+    background: radial-gradient(circle at top, #263d70, #11182f 70%);
+    font-family: system-ui, sans-serif;
+    text-align: center;
+}
+
+.show {
+    width: min(100%, 520px);
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: clamp(2rem, 7vw, 3rem);
+}
+
+.show p {
+    margin-top: 0;
+    color: #bdc9e8;
+}
+
+.stage {
+    position: relative;
+    height: 340px;
+    margin: 22px 0;
+    overflow: hidden;
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 24px;
+    background: linear-gradient(#202e54, #17213e);
+}
+
+.robot {
+    position: absolute;
+    top: 54px;
+    left: 50%;
+    width: 160px;
+    height: 235px;
+    transform: translateX(-50%);
+}
+
+.antenna {
+    position: absolute;
+    top: 0;
+    left: 77px;
+    width: 6px;
+    height: 27px;
+    border-radius: 5px;
+    background: #a9c4db;
+}
+
+.antenna span {
+    position: absolute;
+    top: -9px;
+    left: -5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ff6584;
+    box-shadow: 0 0 14px #ff6584;
+}
+
+.head {
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    left: 31px;
+    width: 98px;
+    height: 72px;
+    border: 5px solid #a9c4db;
+    border-radius: 22px;
+    background: #e3f3ff;
+    box-shadow: inset 0 -7px #c3dcec;
+}
+
+.eyes {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 18px;
+}
+
+.eyes i {
+    width: 10px;
+    height: 13px;
+    border-radius: 50%;
+    background: #304a75;
+}
+
+.mouth {
+    width: 22px;
+    height: 5px;
+    margin: 8px auto 0;
+    border-radius: 5px;
+    background: #ff6584;
+}
+
+.body {
+    position: absolute;
+    z-index: 1;
+    top: 105px;
+    left: 37px;
+    width: 86px;
+    height: 78px;
+    border: 5px solid #a9c4db;
+    border-radius: 18px;
+    background: #e3f3ff;
+    box-shadow: inset 0 -8px #c3dcec;
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 12px;
+}
+
+.panel span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #48c9b0;
+}
+
+.panel span:nth-child(2) {
+    background: #ffbe55;
+}
+
+.panel span:nth-child(3) {
+    background: #ff6584;
+}
+
+.belly {
+    width: 28px;
+    height: 23px;
+    margin: 6px auto 0;
+    border: 4px solid #91abc5;
+    border-radius: 8px;
+}
+
+.arm {
+    position: absolute;
+    z-index: 0;
+    top: 110px;
+    width: 43px;
+    height: 14px;
+    border-radius: 10px;
+    background: #a9c4db;
+    transform-origin: center right;
+}
+
+.arm-left {
+    left: 3px;
+    transform: rotate(25deg);
+}
+
+.arm-right {
+    right: 3px;
+    transform: rotate(-25deg);
+    transform-origin: center left;
+}
+
+.hand {
+    position: absolute;
+    top: -3px;
+    right: -7px;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #a9c4db;
+    border-radius: 50%;
+    background: #e3f3ff;
+}
+
+.arm-right .hand {
+    right: auto;
+    left: -7px;
+}
+
+.leg {
+    position: absolute;
+    top: 174px;
+    width: 15px;
+    height: 39px;
+    border-radius: 8px;
+    background: #a9c4db;
+    transform-origin: top center;
+}
+
+.leg-left {
+    left: 56px;
+}
+
+.leg-right {
+    right: 56px;
+}
+
+.foot {
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 31px;
+    height: 13px;
+    border-radius: 9px;
+    background: #e3f3ff;
+}
+
+.shadow {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    width: 110px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgb(0 0 0 / 28%);
+    transform: translateX(-50%);
+}
+
+.sparkle {
+    position: absolute;
+    color: #ffcf69;
+    font-size: 30px;
+    opacity: 0.7;
+}
+
+.sparkle-one {
+    top: 90px;
+    left: 17%;
+}
+
+.sparkle-two {
+    top: 150px;
+    right: 16%;
+    color: #7ce8dc;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.controls button {
+    padding: 13px 32px;
+    border: 0;
+    border-radius: 999px;
+    color: #17213e;
+    background: #7ce8dc;
+    box-shadow: 0 5px 0 #43bbaF;
+    font: inherit;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    filter: brightness(1.08);
+}
+
+.controls button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #43bbaf;
+}
+
+.dancing .robot {
+    animation: bounce 0.45s ease-in-out infinite alternate;
+}
+
+.dancing .head {
+    animation: head-bop 0.45s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+}
+
+.dancing .antenna {
+    animation: antenna-wiggle 0.3s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+}
+
+.dancing .arm-left {
+    animation: left-arm 0.35s ease-in-out infinite alternate;
+}
+
+.dancing .arm-right {
+    animation: right-arm 0.35s ease-in-out infinite alternate;
+}
+
+.dancing .leg-left {
+    animation: left-leg 0.35s ease-in-out infinite alternate;
+}
+
+.dancing .leg-right {
+    animation: right-leg 0.35s ease-in-out infinite alternate;
+}
+
+.dancing .shadow {
+    animation: shadow 0.45s ease-in-out infinite alternate;
+}
+
+.dancing .sparkle {
+    animation: twinkle 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    to { transform: translate(-50%, -13px) rotate(3deg); }
+}
+
+@keyframes head-bop {
+    to { rotate: 9deg; }
+}
+
+@keyframes antenna-wiggle {
+    to { transform: rotate(12deg); }
+}
+
+@keyframes left-arm {
+    to { transform: rotate(-55deg); }
+}
+
+@keyframes right-arm {
+    to { transform: rotate(55deg); }
+}
+
+@keyframes left-leg {
+    to { transform: rotate(25deg); }
+}
+
+@keyframes right-leg {
+    to { transform: rotate(-25deg); }
+}
+
+@keyframes shadow {
+    to { transform: translateX(-50%) scaleX(0.75); opacity: 0.5; }
+}
+
+@keyframes twinkle {
+    to { transform: scale(1.4) rotate(25deg); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}

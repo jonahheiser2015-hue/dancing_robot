@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roboter-Dance</title>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="show">
+        <h1>Roboter-Dance</h1>
+        <p>Drück den Knopf und lass den Roboter tanzen!</p>
+
+        <div class="stage">
+            <div class="sparkle sparkle-one" aria-hidden="true">✦</div>
+            <div class="sparkle sparkle-two" aria-hidden="true">✧</div>
+            <div class="robot" id="roboter" role="img" aria-label="Ein kleiner Roboter">
+                <div class="antenna"><span></span></div>
+                <div class="head">
+                    <div class="eyes"><i></i><i></i></div>
+                    <div class="mouth"></div>
+                </div>
+                <div class="body">
+                    <div class="panel"><span></span><span></span><span></span></div>
+                    <div class="belly"></div>
+                </div>
+                <div class="arm arm-left"><div class="hand"></div></div>
+                <div class="arm arm-right"><div class="hand"></div></div>
+                <div class="leg leg-left"><div class="foot"></div></div>
+                <div class="leg leg-right"><div class="foot"></div></div>
+            </div>
+            <div class="shadow"></div>
+        </div>
+
+        <div class="controls">
+            <button onclick="hallo()" type="button">Hallo</button>
+            <button id="weiter" type="button" aria-pressed="false">Weiter</button>
+            <button id="wuerfelButton">zufall</button>
+        </div>
+    </main>
+</body>
+</html>
